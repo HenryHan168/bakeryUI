@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="漫漫咬一口烘焙工作室 - 提供精緻手工蛋糕、餅乾、瑞士卷等烘焙商品">
+    <title>漫漫咬一口 | 精緻烘焙工作室</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 導航列 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="icon.png" alt="漫漫咬一口 Logo" class="logo-img">
+                <span class="brand-name">漫漫咬一口</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">首頁</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#products" class="nav-link">商品展示</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">關於我們</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">聯絡我們</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主頁 Hero 區域 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">漫漫咬一口</h1>
+                <p class="hero-subtitle">每一口都是用心製作的美味</p>
+                <p class="hero-description">精選優質食材，手工製作每一道甜點<br>讓您品嚐到最純粹的幸福滋味</p>
+                <a href="#products" class="cta-button">探索商品</a>
+            </div>
+            <div class="hero-image">
+                <img src="lemon-grandma-cake.jpg" alt="精美蛋糕" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- 精選商品區域 -->
+    <section id="featured" class="featured">
+        <div class="container">
+            <h2 class="section-title">精選商品</h2>
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <img src="lemon-grandma-cake.jpg" alt="檸檬老奶奶蛋糕" class="featured-img">
+                    <h3>檸檬老奶奶蛋糕</h3>
+                    <p>清香檸檬香氣，經典老奶奶配方</p>
+                    <span class="price">NT$ 600 起</span>
+                </div>
+                <div class="featured-item">
+                    <img src="almond-cookies.jpg" alt="杏仁片餅" class="featured-img">
+                    <h3>杏仁片餅</h3>
+                    <p>香脆杏仁片配酥鬆餅乾，口感層次豐富</p>
+                    <span class="price">NT$ 15 /片</span>
+                </div>
+                <div class="featured-item">
+                    <img src="cocoa-roll.jpg" alt="法芙娜可可蛋糕卷" class="featured-img">
+                    <h3>法芙娜可可蛋糕卷</h3>
+                    <p>頂級法芙娜可可，濃郁香醇</p>
+                    <span class="price">NT$ 300</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 商品展示區域 -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">所有商品</h2>
+            
+            <!-- 商品分類 -->
+            <div class="product-categories">
+                <button class="category-btn active" data-category="all">全部商品</button>
+                <button class="category-btn" data-category="cakes">蛋糕系列</button>
+                <button class="category-btn" data-category="cookies">餅乾系列</button>
+                <button class="category-btn" data-category="others">其他商品</button>
+            </div>
+
+            <!-- 商品網格 -->
+            <div class="products-grid">
+                <!-- 蛋糕系列 -->
+                <div class="product-item" data-category="cakes">
+                    <img src="lemon-grandma-cake.jpg" alt="檸檬老奶奶蛋糕" class="product-img">
+                    <div class="product-info">
+                        <h3>檸檬老奶奶蛋糕</h3>
+                        <p>清香檸檬香氣，經典老奶奶配方</p>
+                        <div class="product-price">
+                            <span class="size">6吋 NT$ 600</span>
+                            <span class="size">8吋 NT$ 800</span>
+                            <span class="size">片裝 NT$ 140</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="cakes">
+                    <img src="basque-cake.jpg" alt="巴斯客蛋糕" class="product-img">
+                    <div class="product-info">
+                        <h3>巴斯客蛋糕</h3>
+                        <p>使用KIRI乳酪製作，香濃滑順</p>
+                        <div class="product-price">
+                            <span class="price">6吋 NT$ 520</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="cakes">
+                    <img src="classic-sponge-cake.jpg" alt="古早味原味蛋糕" class="product-img">
+                    <div class="product-info">
+                        <h3>古早味原味蛋糕</h3>
+                        <p>懷舊風味，綿密柔軟的經典口感</p>
+                        <div class="product-price">
+                            <span class="price">6吋 NT$ 180</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="cakes">
+                    <img src="classic-cocoa-cake.jpg" alt="古早味可可蛋糕" class="product-img">
+                    <div class="product-info">
+                        <h3>古早味可可蛋糕</h3>
+                        <p>濃郁可可香氣，經典古早味製法</p>
+                        <div class="product-price">
+                            <span class="price">6吋 NT$ 200</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 餅乾系列 -->
+                <div class="product-item" data-category="cookies">
+                    <img src="almond-cookies.jpg" alt="杏仁片餅" class="product-img">
+                    <div class="product-info">
+                        <h3>杏仁片餅</h3>
+                        <p>香脆杏仁片配酥鬆餅乾，手工製作</p>
+                        <div class="product-price">
+                            <span class="price">NT$ 15 /片</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="cookies">
+                    <img src="kyoto-maple.jpg" alt="京都楓糖燒" class="product-img">
+                    <div class="product-info">
+                        <h3>京都楓糖燒</h3>
+                        <p>香甜楓糖風味，紅豆/芋頭雙重選擇</p>
+                        <div class="product-price">
+                            <span class="price">NT$ 35</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="cookies">
+                    <img src="cranberry-oat-cookies.jpg" alt="蔓越莓核桃燕麥餅" class="product-img">
+                    <div class="product-info">
+                        <h3>蔓越莓核桃燕麥餅</h3>
+                        <p>採用桂格燕麥片，酸甜蔓越莓</p>
+                        <div class="product-price">
+                            <span class="price">NT$ 20 /片</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 其他商品 -->
+                <div class="product-item" data-category="others">
+                    <img src="milk-roll.jpg" alt="鮮奶生乳卷" class="product-img">
+                    <div class="product-info">
+                        <h3>鮮奶生乳卷</h3>
+                        <p>新鮮生乳製作，口感滑順香甜</p>
+                        <div class="product-price">
+                            <span class="price">NT$ 300</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="others">
+                    <img src="panna-cotta.jpg" alt="鮮奶酪" class="product-img">
+                    <div class="product-info">
+                        <h3>鮮奶酪</h3>
+                        <p>義式經典甜點，綿密滑嫩</p>
+                        <div class="product-price">
+                            <span class="price">NT$ 65 /杯</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="others">
+                    <img src="cocoa-roll.jpg" alt="法芙娜可可蛋糕卷" class="product-img">
+                    <div class="product-info">
+                        <h3>法芙娜可可蛋糕卷</h3>
+                        <p>頂級法芙娜可可，濃郁香醇風味</p>
+                        <div class="product-price">
+                            <span class="price">NT$ 300</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 關於我們區域 -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">關於漫漫咬一口</h2>
+                    <p class="about-description">
+                        我們是一間充滿愛與溫暖的小型烘焙工作室。每一道甜點都是用心製作，
+                        選用最優質的食材，遵循傳統工藝，融入現代創意。
+                    </p>
+                    <p class="about-description">
+                        從清晨的第一縷陽光開始，我們就在廚房裡忙碌著，
+                        只為了讓每一位顧客都能品嚐到最新鮮、最美味的甜點。
+                        漫漫咬一口，不只是店名，更是我們對品質的承諾。
+                    </p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <span>用心製作</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <span>天然食材</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <span>新鮮現做</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <span>品質保證</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="classic-sponge-cake.jpg" alt="烘焙工作室" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡我們區域 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">聯絡我們</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>電話訂購</h3>
+                            <p>請來電洽詢訂購詳情</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>線上詢問</h3>
+                            <p>歡迎透過 Instagram 私訊詢問</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>營業時間</h3>
+                            <p>週一至週日 9:00 - 20:00</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-gift"></i>
+                        <div>
+                            <h3>客製服務</h3>
+                            <p>提供生日蛋糕客製化服務</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-info">
+                    <h3>訂購須知</h3>
+                    <ul>
+                        <li>建議提前 1-2 天預訂</li>
+                        <li>客製化商品需提前 3-5 天預訂</li>
+                        <li>可提供宅配服務（運費另計）</li>
+                        <li>接受現金或轉帳付款</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="icon.png" alt="漫漫咬一口 Logo" class="footer-logo-img">
+                    <span class="footer-brand">漫漫咬一口</span>
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2024 漫漫咬一口烘焙工作室. 用心製作每一口甜蜜.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

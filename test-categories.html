@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分類功能測試</title>
+    <style>
+        .category-btn {
+            margin: 10px;
+            padding: 10px 20px;
+            border: 2px solid #D4A574;
+            background: white;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+        .category-btn.active {
+            background: #D4A574;
+            color: white;
+        }
+        .product-item {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        .product-item.hide {
+            opacity: 0;
+            transform: scale(0.9);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>分類功能測試</h1>
+    
+    <div class="product-categories">
+        <button class="category-btn active" data-category="all">全部商品</button>
+        <button class="category-btn" data-category="cakes">蛋糕系列</button>
+        <button class="category-btn" data-category="cookies">餅乾系列</button>
+        <button class="category-btn" data-category="others">其他商品</button>
+    </div>
+
+    <div class="products">
+        <div class="product-item" data-category="cakes">蛋糕商品 1</div>
+        <div class="product-item" data-category="cakes">蛋糕商品 2</div>
+        <div class="product-item" data-category="cookies">餅乾商品 1</div>
+        <div class="product-item" data-category="cookies">餅乾商品 2</div>
+        <div class="product-item" data-category="others">其他商品 1</div>
+        <div class="product-item" data-category="others">其他商品 2</div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const productItems = document.querySelectorAll('.product-item');
+
+            console.log('按鈕數量:', categoryBtns.length);
+            console.log('商品數量:', productItems.length);
+
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    console.log('點擊分類:', category);
+                    
+                    // 更新按鈕樣式
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // 篩選商品
+                    productItems.forEach(item => {
+                        const itemCategory = item.getAttribute('data-category');
+                        
+                        if (category === 'all' || itemCategory === category) {
+                            item.classList.remove('hide');
+                            item.style.display = 'block';
+                        } else {
+                            item.classList.add('hide');
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

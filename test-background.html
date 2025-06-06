@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景圖案測試</title>
+    <style>
+        :root {
+            --primary-color: #D4A574;
+            --secondary-color: #F4E4C1;
+            --accent-color: #8B4513;
+            --background-light: #FFFEF7;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .test-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--background-light) 0%, var(--secondary-color) 100%);
+            position: relative;
+        }
+        
+        .test-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('icon.png');
+            background-size: 120px 120px;
+            background-position: 60px 30px;
+            background-repeat: repeat;
+            opacity: 0.25;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .test-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .test-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .test-subtitle {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .test-button {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.1);
+        }
+        
+        .test-button:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(139, 69, 19, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="test-hero">
+        <div class="test-content">
+            <h1 class="test-title">漫漫咬一口</h1>
+            <p class="test-subtitle">每一口都是用心製作的美味</p>
+            <p style="color: #6B4423; margin-bottom: 30px;">精選優質食材，手工製作每一道甜點<br>讓您品嚐到最純粹的幸福滋味</p>
+            <a href="#" class="test-button">探索商品</a>
+        </div>
+    </div>
+</body>
+</html> 

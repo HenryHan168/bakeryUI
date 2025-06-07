@@ -356,5 +356,45 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // LINE QR Code 彈窗功能
+    const lineLink = document.getElementById('line-link');
+    const lineModal = document.getElementById('line-modal');
+    const closeModal = document.getElementById('close-modal');
+
+    // 點擊LINE連結顯示彈窗
+    if (lineLink && lineModal) {
+        lineLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            lineModal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // 防止背景滾動
+        });
+    }
+
+    // 點擊關閉按鈕關閉彈窗
+    if (closeModal && lineModal) {
+        closeModal.addEventListener('click', function() {
+            lineModal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // 恢復滾動
+        });
+    }
+
+    // 點擊彈窗背景關閉彈窗
+    if (lineModal) {
+        lineModal.addEventListener('click', function(e) {
+            if (e.target === lineModal) {
+                lineModal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // 恢復滾動
+            }
+        });
+    }
+
+    // ESC鍵關閉彈窗
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lineModal && lineModal.style.display === 'block') {
+            lineModal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // 恢復滾動
+        }
+    });
+
     console.log('漫漫咬一口網站已載入完成！');
 }); 

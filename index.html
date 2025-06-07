@@ -22,7 +22,7 @@
                     <a href="#home" class="nav-link">首頁</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#products" class="nav-link">商品展示</a>
+                    <a href="#products" class="nav-link">全部商品</a>
                 </li>
                 <li class="nav-item">
                     <a href="#about" class="nav-link">關於我們</a>
@@ -272,7 +272,7 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h3>線上詢問</h3>
-                            <p>歡迎透過 Instagram 私訊詢問</p>
+                            <p>歡迎透過 LINE 私訊詢問</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -312,19 +312,37 @@
                     <span class="footer-brand">漫漫咬一口</span>
                 </div>
                 <div class="footer-text">
-                    <p>&copy; 2024 漫漫咬一口烘焙工作室. 用心製作每一口甜蜜.</p>
+                    <p>&copy; 2025 漫漫咬一口烘焙工作室. 用心製作每一口甜蜜.</p>
                 </div>
                 <div class="footer-social">
-                    <a href="#" class="social-link">
-                        <i class="fab fa-instagram"></i>
+                    <a href="#" class="social-link" id="line-link">
+                        <i class="fab fa-line"></i>
                     </a>
-                    <a href="#" class="social-link">
+                    <!-- <a href="#" class="social-link">
                         <i class="fab fa-facebook"></i>
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- LINE QR Code 彈窗 -->
+    <div id="line-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>加入LINE好友</h3>
+                <span class="close" id="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img src="images/line-qr-code.jpg" alt="LINE QR Code" class="qr-code-img">
+                <p>掃描QR Code加入LINE好友<br>或點擊下方按鈕直接加入</p>
+                <a href="https://line.me/ti/g2/your-line-group-id" class="line-btn" target="_blank">
+                    <i class="fab fa-line"></i>
+                    直接加入LINE
+                </a>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

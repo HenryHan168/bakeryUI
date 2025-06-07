@@ -1,0 +1,39 @@
+# 專案文檔檔案 - 不上傳到git
+README.md
+
+# 調試用檔案
+debug-categories.html
+test-categories.html
+background-update.md
+test-background.html
+
+# 圖片說明檔案
+image-mapping.md
+images/placeholder.html
+images/QR-Code-Instructions.md
+
+# 系統檔案
+.DS_Store
+Thumbs.db
+
+# 編輯器檔案
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 暫存檔案
+*.tmp
+*.bak
+*~
+
+# 日誌檔案
+*.log
+
+# Node.js 相關 (如果未來需要)
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# 備份檔案
+*.backup 

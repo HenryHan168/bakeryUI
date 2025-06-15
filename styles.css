@@ -205,9 +205,10 @@ body {
 }
 
 .hero-img {
-    width: 100%;
-    height: 400px;
+    width: 80%;
+    height: 430px;
     object-fit: cover;
+    background-color: var(--background-light);
     border-radius: 20px;
     box-shadow: 0 10px 30px var(--shadow);
 }
@@ -262,8 +263,9 @@ body {
 
 .featured-img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 250px;
+    object-fit: contain;
+    background-color: var(--background-light);
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -339,8 +341,9 @@ body {
 
 .product-img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 250px;
+    object-fit: contain;
+    background-color: var(--background-light);
 }
 
 .product-info {
@@ -424,8 +427,9 @@ body {
 
 .about-img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: 350px;
+    object-fit: contain;
+    background-color: var(--background-light);
     border-radius: 15px;
     box-shadow: 0 10px 30px var(--shadow);
 }
